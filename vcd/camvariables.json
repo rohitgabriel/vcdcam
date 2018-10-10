@@ -1,0 +1,146 @@
+{
+  "input_datatypes": [
+  ],
+  "output_datatype": "content_template_output",
+  "input_groups": [
+    {
+      "name": "cloud",
+      "label": "Cloud Input Variables"
+    },
+
+    {
+      "name": "virtualmachine",
+      "label": "Virtual Machine Input Variables"
+    }
+
+  ],
+  "output_groups": [
+    {
+      "name": "content_template_output",
+      "label": "Outputs"
+    }
+  ],
+  "template_input_params": [
+    {
+      "name": "vcd_user_name",
+      "type": "string",
+      "description": "User name",
+      "default": "",
+      "hidden": false,
+      "label": "username",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "vcd_user_password",
+      "type": "string",
+      "description": "User password",
+      "default": "",
+      "hidden": false,
+      "label": "password",
+      "secured": true,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "vcd_tenancy_name",
+      "type": "string",
+      "description": "Tenancy name",
+      "default": "tstcs1",
+      "hidden": false,
+      "label": "tenancy",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "vcd_host_url",
+      "type": "string",
+      "description": "VCD url",
+      "default": "https://portal.nzcc.ihost.com/api",
+      "hidden": false,
+      "label": "hosturl",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "vcd_vdc_name",
+      "type": "string",
+      "description": "VDC name",
+      "default": "TSTCS1-PAYG",
+      "hidden": false,
+      "label": "vdcname",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "vcd_vapp_name",
+      "type": "string",
+      "description": "Vapp name",
+      "default": "",
+      "hidden": false,
+      "label": "Vapp name",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    },
+    {
+      "name": "vcd_vm_name",
+      "type": "string",
+      "description": "VM name",
+      "default": "",
+      "hidden": false,
+      "label": "VM name",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    },
+    {
+      "name": "vcd_catalog_name",
+      "type": "string",
+      "description": "VCD catalog name",
+      "default": "Public IAAS",
+      "hidden": false,
+      "label": "VCD catalog name",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    },
+    {
+      "name": "vcd_vm_template_name",
+      "type": "string",
+      "description": "VM template name",
+      "default": "W2016_STD_Full_Gold_201710",
+      "hidden": false,
+      "label": "VM template name",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    },
+    {
+      "name": "vcd_network_name",
+      "type": "string",
+      "description": "VCD network name",
+      "default": "TSM-Test",
+      "hidden": false,
+      "label": "VCD network name",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    }
+  ],
+  "template_output_params": []
+}
