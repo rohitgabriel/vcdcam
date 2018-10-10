@@ -2,7 +2,7 @@
     "name": "Amazon EC2 Virtual Server with SSH key",
     "description": "Amazon EC2 Ubuntu 14.04 virtual server under an existing Virtual Private Cloud (VPC).",
     "version": "1.0",
-    "imageUrl": "./assets/svg/IBM_WebSphere_Standalone.svg",
+    "imageUrl": "",
     "image": "tp_WAS_standalone.png",
     "type": "prebuilt",
     "status": "active",
@@ -18,8 +18,8 @@
       "template_source": {
         "githubRepoUrl": "",
         "githubAccessToken": "",
-        "relativePathToTemplateFolder": "AWS/terraform/singlefile/hcl",
-        "templateFileName": "scenario1.tf"
+        "relativePathToTemplateFolder": "vcd",
+        "templateFileName": "main.tf"
       }
     },
     "metadata": {
