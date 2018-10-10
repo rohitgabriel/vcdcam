@@ -19,7 +19,7 @@
         "githubRepoUrl": "",
         "githubAccessToken": "",
         "relativePathToTemplateFolder": "",
-        "templateFileName": "main.tf"
+        "templateFileName": ""
       }
     },
     "metadata": {
