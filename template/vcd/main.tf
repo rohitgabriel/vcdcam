@@ -45,7 +45,7 @@ variable "vcd_org_name" {
 
 variable "vcd_host_url" {
   description = "VCD host url"
-  default     = "https://portal.nzcc.ihost.com/api"
+  default     = "https://103.5.83.14/api"
 }
 
 variable "vcd_vdc_name" {
