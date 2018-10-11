@@ -73,17 +73,17 @@ variable "vcd_vm_template_name" {
 
 variable "vcd_network_name" {
   description = "Network name"
-  default = "TSM-Test"
+  default = "TWG-ICP"
 }
 
 # VCD vm provision
 provider "vcd" {
   allow_unverified_ssl = "${var.allow_unverified_ssl}"
-  user = "${vcd_user_name}"
-  password = "${vcd_user_password}"
-  org = "${vcd_org_name}"
-  url = "${vcd_host_url}"
-  vdc = "${vcd_vdc_name}"
+  user = "${var.vcd_user_name}"
+  password = "${var.vcd_user_password}"
+  org = "${var.vcd_org_name}"
+  url = "${var.vcd_host_url}"
+  vdc = "${var.vcd_vdc_name}"
 }
 
 
