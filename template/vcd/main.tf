@@ -3,7 +3,10 @@
 ##############################################################
 # Keys - CAMC (public/private) & optional User Key (public)
 ##############################################################
-
+variable "allow_unverified_ssl" {
+  description = "Communication with vsphere server with self signed certificate"
+  default     = "true"
+}
 
 ##############################################################
 # Define the vsphere provider
@@ -75,11 +78,12 @@ variable "vcd_network_name" {
 
 # VCD vm provision
 provider "vcd" {
-  user = "vcd_user_name"
-  password = "vcd_user_password"
-  org = "vcd_org_name"
-  url = "vcd_host_url"
-  vdc = "vcd_vdc_name"
+  allow_unverified_ssl = "${var.allow_unverified_ssl}"
+  user = "${vcd_user_name}"
+  password = "${vcd_user_password}"
+  org = "${vcd_org_name}"
+  url = "${vcd_host_url}"
+  vdc = "${vcd_vdc_name}"
 }
 
 
