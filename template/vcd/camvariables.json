@@ -58,9 +58,9 @@
       "group_name": "cloud"
     },
     {
-      "name": "vcd_tenancy_name",
+      "name": "vcd_org_name",
       "type": "string",
-      "description": "Tenancy name",
+      "description": "Org name",
       "default": "tstcs1",
       "hidden": false,
       "label": "tenancy",
@@ -145,7 +145,7 @@
       "name": "vcd_network_name",
       "type": "string",
       "description": "VCD network name",
-      "default": "TSM-Test",
+      "default": "TWG-ICP",
       "hidden": false,
       "label": "VCD network name",
       "secured": false,

@@ -38,8 +38,8 @@ variable "vcd_user_password" {
   description = "Password for VCD login"
 }
 
-variable "vcd_tenancy_name" {
-  description = "Tenancy name"
+variable "vcd_org_name" {
+  description = "Org name"
   default = "tstcs1"
 }
 
