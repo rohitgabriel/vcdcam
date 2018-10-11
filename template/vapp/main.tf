@@ -87,7 +87,7 @@ provider "vcd" {
 }
 
 
-resource "vcd_vapp" "${var.vcd_vapp_name}" {
-  name  = "${var.vcd_vapp_name}"
+resource "vcd_vapp" "vappxyz" {
+  name  = "${var.vcd_vm_name}"
 
 }
