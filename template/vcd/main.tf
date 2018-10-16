@@ -45,7 +45,7 @@ variable "vcd_org_name" {
 
 variable "vcd_host_url" {
   description = "VCD host url"
-  default     = "https://103.5.83.14/api"
+  default     = "https://portal.nzcc.ihost.com/api"
 }
 
 variable "vcd_vdc_name" {
@@ -87,7 +87,7 @@ provider "vcd" {
 }
 
 
-resource "vcd_vapp" "vappxyz" {
+resource "vcd_vapp" "${vcd_vapp_name}" {
   name  = "${var.vcd_vm_name}"
   catalog_name = "${var.vcd_catalog_name}"
   template_name = "${var.vcd_vm_template_name}"
