@@ -63,12 +63,12 @@ variable "vcd_vm_name" {
 
 variable "vcd_catalog_name" {
   description = "catalog name"
-  default = "Public IAAS"
+  default = "Appliances and media"
 }
 
 variable "vcd_vm_template_name" {
   description = "template name"
-  default = "W2016_STD_Full_20171003"
+  default = "vApp_rohit_test-catalog"
 }
 
 variable "vcd_network_name" {
