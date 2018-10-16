@@ -133,7 +133,7 @@
       "name": "vcd_vm_template_name",
       "type": "string",
       "description": "VM template name",
-      "default": "W2016_STD_Full_Gold_201710",
+      "default": "W2016_STD_Full_20171003",
       "hidden": false,
       "label": "VM template name",
       "secured": false,

@@ -68,7 +68,7 @@ variable "vcd_catalog_name" {
 
 variable "vcd_vm_template_name" {
   description = "template name"
-  default = "W2016_STD_Full_Gold_201710"
+  default = "W2016_STD_Full_20171003"
 }
 
 variable "vcd_network_name" {
@@ -87,7 +87,7 @@ provider "vcd" {
 }
 
 
-resource "vcd_vapp" "DO-NOT-DELETE-ROHIT" {
+resource "vcd_vapp" "vappxyz" {
   name  = "${var.vcd_vm_name}"
   catalog_name = "${var.vcd_catalog_name}"
   template_name = "${var.vcd_vm_template_name}"

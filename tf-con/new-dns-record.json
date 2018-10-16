@@ -1,0 +1,13 @@
+{
+    "kind": "Service",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "portalihost",
+        "namespace": "services"
+    },
+    "spec": {
+        "type": "ExternalName",
+        "externalName": "portal.nzcc.ihost.com",
+        "ports": [{ "port": 443 }]
+    }
+}
