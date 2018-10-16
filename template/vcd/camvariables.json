@@ -73,7 +73,7 @@
       "name": "vcd_host_url",
       "type": "string",
       "description": "VCD url",
-      "default": "https://103.5.83.14/api",
+      "default": "https://portal.nzcc.ihost.com/api",
       "hidden": false,
       "label": "hosturl",
       "secured": false,

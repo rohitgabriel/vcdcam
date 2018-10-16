@@ -87,7 +87,7 @@ provider "vcd" {
 }
 
 
-resource "vcd_vapp" "${vcd_vapp_name}" {
+resource "vcd_vapp" "vtest" {
   name  = "${var.vcd_vm_name}"
   catalog_name = "${var.vcd_catalog_name}"
   template_name = "${var.vcd_vm_template_name}"
