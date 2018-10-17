@@ -77,7 +77,8 @@ variable "vcd_network_name" {
 # VCD vm provision
 
 data "template_file" "init" {
-  template = "${file("${path.cwd}/setup.sh")}"
+  #template = "${file("${path.cwd}/setup.sh")}"
+  template = "${file("setup.sh")}"
 }
 
 provider "vcd" {
