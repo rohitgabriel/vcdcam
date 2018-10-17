@@ -97,4 +97,5 @@ resource "vcd_vapp" "vtest" {
   template_name = "${var.vcd_vm_template_name}"
   network_name = "${var.vcd_network_name}"
   initscript    = "${data.template_file.init.rendered}"
+  power_on = "true"
 }
