@@ -95,6 +95,7 @@ provider "vcd" {
 resource "vcd_vapp" "vtest" {
   name  = "${var.vcd_vapp_name}"
   network_name = "${var.vcd_network_name}"
+  power_on = "false"
 }
 
 
@@ -105,5 +106,5 @@ resource "vcd_vapp_vm" "vmname" {
   template_name = "${var.vcd_vm_template_name}"
   network_name = "${var.vcd_network_name}"
   initscript    = "${data.template_file.init.rendered}"
-
+  power_on = "true"
 }
