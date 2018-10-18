@@ -88,11 +88,19 @@ provider "vcd" {
   org = "${var.vcd_org_name}"
   url = "${var.vcd_host_url}"
   vdc = "${var.vcd_vdc_name}"
+  max_retry_timeout = "120"
 }
 
 
 resource "vcd_vapp" "vtest" {
   name  = "${var.vcd_vapp_name}"
+  network_name = "${var.vcd_network_name}"
+}
+
+
+resource "vcd_vapp_vm" "vmname" {
+  vapp_name = "${vcd_vapp.vtest.name}"
+  name = "${var.vcd_vapp_name}"
   catalog_name = "${var.vcd_catalog_name}"
   template_name = "${var.vcd_vm_template_name}"
   network_name = "${var.vcd_network_name}"
