@@ -34,6 +34,18 @@
       "group_name": "cloud"
     },
     {
+      "name": "power_off",
+      "type": "string",
+      "description": "power off vapp or vm",
+      "default": false,
+      "hidden": true,
+      "label": "power",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
       "name": "vcd_user_name",
       "type": "string",
       "description": "User name",

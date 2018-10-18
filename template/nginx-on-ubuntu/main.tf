@@ -7,6 +7,10 @@ variable "allow_unverified_ssl" {
   description = "Communication with vsphere server with self signed certificate"
   default     = "true"
 }
+variable "power_off" {
+  description = "power on vapp or vm"
+  default     = "false"
+}
 
 ##############################################################
 # Define the vsphere provider
@@ -95,7 +99,7 @@ provider "vcd" {
 resource "vcd_vapp" "vtest" {
   name  = "${var.vcd_vapp_name}"
   network_name = "${var.vcd_network_name}"
-  power_on = "false"
+  power_on = "${var.power_off}"
 }
 
 
@@ -106,5 +110,5 @@ resource "vcd_vapp_vm" "vmname" {
   template_name = "${var.vcd_vm_template_name}"
   network_name = "${var.vcd_network_name}"
   initscript    = "${data.template_file.init.rendered}"
-  power_on = "true"
+
 }
