@@ -112,7 +112,7 @@
       "default": "",
       "hidden": false,
       "label": "Edge Gateway Name",
-      "secured": true,
+      "secured": false,
       "required": true,
       "immutable": false,
       "group_name": "network"

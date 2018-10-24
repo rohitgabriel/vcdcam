@@ -109,7 +109,7 @@ provider "vcd" {
   org = "${var.vcd_org_name}"
   url = "${var.vcd_host_url}"
   vdc = "${var.vcd_vdc_name}"
-  max_retry_timeout = "120"
+  max_retry_timeout = "60"
 }
 
 
