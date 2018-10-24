@@ -3,7 +3,10 @@
 ##############################################################
 # Keys - CAMC (public/private) & optional User Key (public)
 ##############################################################
-
+variable "allow_unverified_ssl" {
+  description = "Communication with vsphere server with self signed certificate"
+  default     = "true"
+}
 ##############################################################
 # Define the vsphere provider
 ##############################################################
@@ -25,6 +28,28 @@ provider "camc" {
 #########################################################
 ##### Resource : vm
 #########################################################
+variable "vcd_user_name" {
+  description = "User name for VCD login"
+}
+
+variable "vcd_user_password" {
+  description = "Password for VCD login"
+}
+
+variable "vcd_org_name" {
+  description = "Org name"
+  default = "tstcs1"
+}
+
+variable "vcd_host_url" {
+  description = "VCD host url"
+  default     = "https://portal.nzcc.ihost.com/api"
+}
+
+variable "vcd_vdc_name" {
+  description = "VDC name"
+  default     = "TSTCS1-PAYG"
+}
 
 variable "vcd_network_name" {
   description = "A unique name for the network"
