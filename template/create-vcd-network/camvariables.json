@@ -1,0 +1,146 @@
+{
+  "input_datatypes": [
+  ],
+  "output_datatype": "content_template_output",
+  "input_groups": [
+    {
+      "name": "cloud",
+      "label": "Cloud Input Variables"
+    },
+
+    {
+      "name": "network",
+      "label": "Network Input Variables"
+    }
+
+  ],
+  "output_groups": [
+    {
+      "name": "content_template_output",
+      "label": "Outputs"
+    }
+  ],
+  "template_input_params": [
+    {
+      "name": "vcd_network_name",
+      "type": "string",
+      "description": "A unique name for the network",
+      "default": "",
+      "hidden": false,
+      "label": "Unique Network Name",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "network"
+    },
+    {
+      "name": "vcd_edge_gateway",
+      "type": "string",
+      "description": "The name of the edge gateway ",
+      "default": "",
+      "hidden": false,
+      "label": "Edge Gateway Name",
+      "secured": true,
+      "required": true,
+      "immutable": false,
+      "group_name": "network"
+    },
+    {
+      "name": "vcd_network_netmask",
+      "type": "string",
+      "description": "The netmask for the new network. Defaults to 255.255.255.0",
+      "default": "255.255.255.0",
+      "hidden": false,
+      "label": "Netmask",
+      "secured": false,
+      "required": false,
+      "immutable": false,
+      "group_name": "network"
+    },
+    {
+      "name": "vcd_gateway_address",
+      "type": "string",
+      "description": "The gateway for this network ",
+      "default": "",
+      "hidden": false,
+      "label": "Gateway Address",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "network"
+    },
+    {
+      "name": "vcd_network_dns1",
+      "type": "string",
+      "description": "First DNS server to use. Defaults to 8.8.8.8",
+      "default": "8.8.8.8",
+      "hidden": false,
+      "label": "DNS Server 1",
+      "secured": false,
+      "required": false,
+      "immutable": false,
+      "group_name": "network"
+    },
+    {
+      "name": "vcd_network_dns2",
+      "type": "string",
+      "description": "Second DNS server to use. Defaults to 8.8.4.4",
+      "default": "8.8.4.4",
+      "hidden": false,
+      "label": "DNS Server 2",
+      "secured": false,
+      "required": false,
+      "immutable": false,
+      "group_name": "network"
+    },
+    {
+      "name": "vcd_network_dnssuffix",
+      "type": "string",
+      "description": "A FQDN for the virtual machines on this network",
+      "default": "icplab.com",
+      "hidden": false,
+      "label": "DNS Suffix",
+      "secured": false,
+      "required": false,
+      "immutable": false,
+      "group_name": "network"
+    },
+    {
+      "name": "vcd_network_dhcp_pool",
+      "type": "string",
+      "description": "A range of IPs to issue to virtual machines that don't have a static IP",
+      "default": "",
+      "hidden": false,
+      "label": "DHCP Pool",
+      "secured": false,
+      "required": false,
+      "immutable": false,
+      "group_name": "network"
+    },
+    {
+      "name": "vcd_network_dhcp_start_address",
+      "type": "string",
+      "description": "The first address in the IP Range ",
+      "default": "",
+      "hidden": false,
+      "label": "DHCP Pool Start address",
+      "secured": false,
+      "required": false,
+      "immutable": false,
+      "group_name": "network"
+    },
+    {
+      "name": "vcd_network_dhcp_end_address",
+      "type": "string",
+      "description": "The end address in the IP Range ",
+      "default": "",
+      "hidden": false,
+      "label": "DHCP Pool end address",
+      "secured": false,
+      "required": false,
+      "immutable": false,
+      "group_name": "network"
+    }
+  ],
+  "template_output_params": []
+}

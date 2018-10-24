@@ -1,0 +1,44 @@
+{
+  "name": "VCD-Create-Network",
+  "description": "Create a subnet of static or dynamic IP pools",
+  "type": "prebuilt",
+  "version": "1.0",
+  "manifest": {
+    "template_type": "Terraform",
+    "template_format": "HCL",
+    "template_provider": "vcd",
+    "template": {
+      "templateOutput": "",
+      "templateVariables": "",
+      "templateData": ""
+    },
+    "template_source": {
+      "githubRepoUrl": "",
+      "githubAccessToken": "",
+      "relativePathToTemplateFolder": "template/vcd",
+      "templateFileName": "main.tf"
+    }
+  },
+  "metadata": {
+      "displayName": "Create-VCD-Network",
+      "longDescription": "Provides a vCloud Director VDC Network. This can be used to create, modify, and delete internal networks for vApps to connect.",
+      "bullets": [
+       {
+         "title": "Clouds",
+         "description": "VMware"
+       },
+       {
+         "title": "Topology",
+         "description": "Network resource"
+       },
+       {
+         "title": "Network settings",
+         "description": "Static and dynamic IP pools"
+       },
+       {
+         "title": "Usage and special notes",
+         "description": "Requires Edge gateway name"
+       }
+      ]
+  }
+}
