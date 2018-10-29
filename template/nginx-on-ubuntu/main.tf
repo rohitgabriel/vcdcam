@@ -116,3 +116,7 @@ resource "vcd_vapp_vm" "vmname" {
   initscript    = "${data.template_file.init.rendered}"
   ip = "${var.vcd_ip_addr}"
 }
+
+output "vm_ip" {
+    value = "${vcd_vapp_vm.vmname.ip}"
+}
