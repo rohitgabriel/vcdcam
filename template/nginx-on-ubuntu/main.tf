@@ -76,6 +76,10 @@ variable "vcd_network_name" {
   default = "TWG-ICP"
 }
 
+variable "vcd_ip_addr" {
+  description = "Static IP address"
+  default = "TWG-ICP"
+}
 
 
 # VCD vm provision
@@ -110,5 +114,5 @@ resource "vcd_vapp_vm" "vmname" {
   template_name = "${var.vcd_vm_template_name}"
   network_name = "${var.vcd_network_name}"
   initscript    = "${data.template_file.init.rendered}"
-
+  ip = "${var.vcd_ip_addr}"
 }

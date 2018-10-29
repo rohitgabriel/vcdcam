@@ -152,6 +152,18 @@
       "required": true,
       "immutable": false,
       "group_name": "virtualmachine"
+    },
+    {
+      "name": "vcd_ip_addr",
+      "type": "string",
+      "description": "IP address",
+      "default": "TWG-ICP",
+      "hidden": false,
+      "label": "Static IP",
+      "secured": false,
+      "required": false,
+      "immutable": false,
+      "group_name": "virtualmachine"
     }
   ],
   "template_output_params": []
