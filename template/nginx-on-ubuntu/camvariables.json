@@ -157,7 +157,7 @@
       "name": "vcd_ip_addr",
       "type": "string",
       "description": "IP address",
-      "default": "TWG-ICP",
+      "default": "10.0.0.35",
       "hidden": false,
       "label": "Static IP",
       "secured": false,
