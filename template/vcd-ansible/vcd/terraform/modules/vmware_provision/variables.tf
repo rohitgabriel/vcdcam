@@ -52,7 +52,9 @@ variable "dependsOn" {
   description = "Boolean for dependency"
 }
 
-
+variable "user" {
+  description = "User name for VCD login"
+}
 
 variable "vcd_user_name" {
   description = "User name for VCD login"
