@@ -32,6 +32,11 @@ variable "vm_domain" {
     default     = "icplab.com"
   }
 
+variable "allow_unverified_ssl" {
+    description = "Communication with vsphere server with self signed certificate"
+    default     = "true"
+}
+
 variable "vm_private_ssh_key" { }
 variable "vm_public_ssh_key" { }
 
@@ -56,49 +61,53 @@ variable "user" {
   description = "User name for VCD login"
 }
 
+variable "name" {
+  description = "VM name"
+}
+
 variable "vcd_user_name" {
   description = "User name for VCD login"
 }
 
-variable "vcd_user_password" {
+variable "password" {
   description = "Password for VCD login"
 }
 
-variable "vcd_org_name" {
+variable "org" {
   description = "Org name"
   default = "tstcs1"
 }
 
-variable "vcd_host_url" {
+variable "url" {
   description = "VCD host url"
   default     = "https://portal.nzcc.ihost.com/api"
 }
 
-variable "vcd_vdc_name" {
+variable "vdc" {
   description = "VDC name"
   default     = "TSTCS1-PAYG"
 }
 
-variable "vcd_vapp_name" {
+variable "vapp_name" {
   description = "Vapp name"
 }
 
-variable "vcd_catalog_name" {
+variable "catalog_name" {
   description = "catalog name"
   default = "Appliances and media"
 }
 
-variable "vcd_vm_template_name" {
+variable "template_name" {
   description = "template name"
   default = "Ubuntu-1604-linux"
 }
 
-variable "vcd_network_name" {
+variable "network_name" {
   description = "Network name"
   default = "TWG-ICP"
 }
 
-variable "vcd_ip_addr" {
+variable "ip" {
   description = "Static IP address"
   default = "TWG-ICP"
 }
