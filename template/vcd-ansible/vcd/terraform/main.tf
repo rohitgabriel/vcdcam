@@ -47,12 +47,11 @@ resource "null_resource" "create-temp-random-dir" {
 module "deployVM_singlenode" {
   source = "./modules/vmware_provision"
 
-  vapp_name = "${vcd_vapp.vtest.name}"
+  vapp_name = "${var.vcd_vapp_name}"
   name = "${var.vcd_vapp_name}"
   catalog_name = "${var.vcd_catalog_name}"
   template_name = "${var.vcd_vm_template_name}"
   network_name = "${var.vcd_network_name}"
-  initscript    = "${data.template_file.init.rendered}"
   ip = "${var.vcd_ip_addr}"
   vm_private_ssh_key         = "${tls_private_key.generate.private_key_pem}"
   vm_public_ssh_key          = "${tls_private_key.generate.public_key_openssh}"
