@@ -2,7 +2,10 @@
 ##############################################################
 # Vsphere data for provider
 ##############################################################
-
+variable "allow_unverified_ssl" {
+  description = "Communication with vsphere server with self signed certificate"
+  default     = "true"
+}
 
 #Variable : vm_-name
 variable "vm_name" {

@@ -11,7 +11,7 @@ resource "vcd_vapp_vm" "vmname" {
   catalog_name = "${var.vcd_catalog_name}"
   template_name = "${var.vcd_vm_template_name}"
   network_name = "${var.vcd_network_name}"
-  initscript    = "${data.template_file.init.rendered}"
+
   ip = "${var.vcd_ip_addr}"
 
 
@@ -113,7 +113,7 @@ EOF
 }
 
 resource "null_resource" "vm-create_done" {
-  depends_on = ["vsphere_virtual_machine.vm", "vsphere_virtual_machine.vm2disk"]
+  depends_on = ["vcd_vapp_vm.vmname"]
 
   provisioner "local-exec" {
     command = "echo 'VM creates done for ${var.vm_name}X.'"

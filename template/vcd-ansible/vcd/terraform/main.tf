@@ -56,9 +56,9 @@ module "deployVM_singlenode" {
   ip = "${var.vcd_ip_addr}"
   vm_private_ssh_key         = "${tls_private_key.generate.private_key_pem}"
   vm_public_ssh_key          = "${tls_private_key.generate.public_key_openssh}"
-  vm_vcpu                    = "${var.singlenode_vcpu}"
-  vm_name                    = "${var.singlenode_prefix_name}"
-  vm_memory                  = "${var.singlenode_memory}"
+  vm_vcpu                    = "${var.vm_vcpu}"
+  vm_name                    = "${var.vm_name}"
+  vm_memory                  = "${var.vm_memory}"
 
 
   random                     = "${random_string.random-dir.result}"
@@ -69,7 +69,7 @@ module "ansible_install" {
   private_key          = "${tls_private_key.generate.private_key_pem}"
   vm_os_password       = "${var.vm_os_password}"
   vm_os_user           = "${var.vm_os_user}"
-  vm_ipv4_address_list = "${concat(var.vm_ipv4_address)}"
+  vm_ipv4_address_list = "${concat(var.vcd_ip_addr)}"
   random               = "${random_string.random-dir.result}"
   dependsOn            = "${module.deployVM_singlenode.dependsOn}"
 }

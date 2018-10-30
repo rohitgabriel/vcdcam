@@ -2,26 +2,7 @@
 ##############################################################
 # Vsphere data for provider
 ##############################################################
-data "vsphere_datacenter" "vsphere_datacenter" {
-  name = "${var.vsphere_datacenter}"
-}
-data "vsphere_datastore" "vsphere_datastore" {
-  name = "${var.vm_disk1_datastore}"
-  datacenter_id = "${data.vsphere_datacenter.vsphere_datacenter.id}"
-}
-data "vsphere_resource_pool" "vsphere_resource_pool" {
-  name = "${var.vsphere_resource_pool}"
-  datacenter_id = "${data.vsphere_datacenter.vsphere_datacenter.id}"
-}
-data "vsphere_network" "vm_network" {
-  name = "${var.vm_network_interface_label}"
-  datacenter_id = "${data.vsphere_datacenter.vsphere_datacenter.id}"
-}
 
-data "vsphere_virtual_machine" "vm_template" {
-  name = "${var.vm_template}"
-  datacenter_id = "${data.vsphere_datacenter.vsphere_datacenter.id}"
-}
 
 #Variable : vm_-name
 variable "vm_name" {
