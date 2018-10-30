@@ -6,13 +6,13 @@ resource "vcd_vapp" "vtest" {
 
 
 resource "vcd_vapp_vm" "vmname" {
-  vapp_name = "${vcd_vapp.vtest.name}"
-  name = "${var.vcd_vapp_name}"
-  catalog_name = "${var.vcd_catalog_name}"
-  template_name = "${var.vcd_vm_template_name}"
-  network_name = "${var.vcd_network_name}"
+  vapp_name = "${var.vapp_name}"
+  name = "${var.vapp_name}"
+  catalog_name = "${var.catalog_name}"
+  template_name = "${var.template_name}"
+  network_name = "${var.network_name}"
 
-  ip = "${var.vcd_ip_addr}"
+  ip = "${var.ip}"
 
 
   // module "Setup_ssh_master" {
