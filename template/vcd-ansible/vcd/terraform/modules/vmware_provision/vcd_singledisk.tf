@@ -1,6 +1,6 @@
 resource "vcd_vapp" "vtest" {
-  name  = "${var.vcd_vapp_name}"
-  network_name = "${var.vcd_network_name}"
+  name  = "${var.vapp_name}"
+  network_name = "${var.network_name}"
   power_on = "${var.power_off}"
 }
 
