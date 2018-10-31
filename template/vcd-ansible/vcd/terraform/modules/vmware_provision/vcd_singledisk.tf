@@ -26,6 +26,7 @@ resource "vcd_vapp_vm" "vmname" {
     type     = "ssh"
     user     = "${var.user}"
     password = "${var.password}"
+    host = "${var.vm_name}"
   }
 
   provisioner "file" {
