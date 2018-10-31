@@ -19,6 +19,10 @@ variable "count" {
 #########################################################
 ##### Resource : vm_
 #########################################################
+variable "power_off" {
+  description = "power on vapp or vm"
+  default     = "false"
+}
 
 variable "vm_os_password" {
   type = "string"

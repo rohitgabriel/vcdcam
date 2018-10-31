@@ -11,7 +11,7 @@ resource "vcd_vapp_vm" "vmname" {
   catalog_name = "${var.vcd_catalog_name}"
   template_name = "${var.vcd_vm_template_name}"
   network_name = "${var.vcd_network_name}"
-  password = "{var.vm_os_password}"
+  password = "${var.vm_os_password}"
   ip = "${var.vcd_ip_addr}"
 
 
