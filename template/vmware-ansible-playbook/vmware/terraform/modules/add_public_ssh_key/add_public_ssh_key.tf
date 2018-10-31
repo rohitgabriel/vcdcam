@@ -11,7 +11,7 @@ resource "null_resource" "add_public_ssh_key" {
     type     = "ssh"
     user     = "${var.vm_os_user}"
     password = "${var.vm_os_password}"
-    host     = "${var.vm_ipv4_address_list[count.index]}"
+    host     = "${var.vcd_ip_addr[count.index]}"
   }
 
   provisioner "file" {
