@@ -26,7 +26,7 @@ resource "vcd_vapp_vm" "vmname" {
     type     = "ssh"
     user     = "${var.user}"
     password = "${var.password}"
-    host = "${var.vm_name}"
+    host = "${var.vm_name}.icplab.com"
   }
 
   provisioner "file" {
