@@ -64,7 +64,8 @@ module "deployVM_singlenode" {
   org = "${var.vcd_org_name}"
   url = "${var.vcd_host_url}"
   vdc = "${var.vcd_vdc_name}"
-
+  vm_os_password       = "${var.vm_os_password}"
+  vm_os_user           = "${var.vm_os_user}"
   random                     = "${random_string.random-dir.result}"
 }
 
