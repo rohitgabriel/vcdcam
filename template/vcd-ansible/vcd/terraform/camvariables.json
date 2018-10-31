@@ -197,6 +197,18 @@
       "required": false,
       "immutable": false,
       "group_name": "virtualmachine"
+    },
+    {
+      "name": "vm_name",
+      "type": "string",
+      "description": "IP address",
+      "default": "xyz-vm-ansible",
+      "hidden": false,
+      "label": "VM Name",
+      "secured": false,
+      "required": false,
+      "immutable": false,
+      "group_name": "virtualmachine"
     }
   ],
   "template_output_params": [
