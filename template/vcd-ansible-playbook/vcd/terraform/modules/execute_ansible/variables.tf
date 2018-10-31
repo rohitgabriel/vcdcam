@@ -1,4 +1,4 @@
-variable "vcd_ip_addr" {
+variable "vcd_ip_address" {
   type        = "list"
   description = "IPv4 Address's in List format"
 }

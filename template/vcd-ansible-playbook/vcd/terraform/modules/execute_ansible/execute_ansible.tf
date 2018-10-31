@@ -20,10 +20,10 @@ resource "null_resource" "execute_ansible" {
   provisioner "file" {
     content = <<EOF
 [webservers]
-${var.vm_ipv4_address_list[count.index]}
+${var.vcd_ip_address[count.index]}
 
 [dbservers]
-${var.vm_ipv4_address_list[count.index]}
+${var.vcd_ip_address[count.index]}
 EOF
 
     destination = "/tmp/ansible-playbook-host"

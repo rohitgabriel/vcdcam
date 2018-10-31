@@ -76,7 +76,7 @@ module "add_ansible_public_key" {
   private_key          = "${tls_private_key.generate.private_key_pem}"
   vm_os_password       = "${var.vm_os_password}"
   vm_os_user           = "${var.vm_os_user}"
-  vm_ipv4_address_list = "${concat(var.vcd_ip_address)}"
+  vcd_ip_address = "${concat(var.vcd_ip_address)}"
   random               = "${random_string.random-dir.result}"
   dependsOn            = "${module.deployVM_singlenode.dependsOn}"
   public_key           = "${var.ansible_public_key_openssh}"
