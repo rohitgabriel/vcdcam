@@ -201,7 +201,7 @@
     {
       "name": "vm_name",
       "type": "string",
-      "description": "IP address",
+      "description": "VM Name",
       "default": "xyz-vm-ansible",
       "hidden": false,
       "label": "VM Name",

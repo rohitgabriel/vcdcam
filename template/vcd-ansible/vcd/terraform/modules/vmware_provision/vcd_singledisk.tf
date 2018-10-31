@@ -7,7 +7,7 @@ resource "vcd_vapp" "vtest" {
 
 resource "vcd_vapp_vm" "vmname" {
   vapp_name = "${var.vapp_name}"
-  name = "${var.name}"
+  name = "${var.vm_name}"
   catalog_name = "${var.catalog_name}"
   template_name = "${var.template_name}"
   network_name = "${var.network_name}"
@@ -24,8 +24,8 @@ resource "vcd_vapp_vm" "vmname" {
   # Specify the connection
   connection {
     type     = "ssh"
-    user     = "${var.vm_os_user}"
-    password = "${var.vm_os_password}"
+    user     = "${var.user}"
+    password = "${var.password}"
   }
 
   provisioner "file" {
