@@ -12,7 +12,7 @@ resource "vcd_vapp_vm" "vmname" {
   template_name = "${var.template_name}"
   network_name = "${var.network_name}"
   ip = "${var.ip}"
-
+  trace = "true"
 
   // module "Setup_ssh_master" {
   //   source = "../../modules/ssh_keygen"
@@ -26,6 +26,7 @@ resource "vcd_vapp_vm" "vmname" {
     type     = "ssh"
     user     = "${var.user}"
     password = "${var.password}"
+    trace = "true"
   }
 
   provisioner "file" {
