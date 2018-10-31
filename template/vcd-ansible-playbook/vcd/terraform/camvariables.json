@@ -7,10 +7,17 @@
       "name": "cloud",
       "label": "Cloud Input Variables"
     },
-
+    {
+      "name": "ansibleserver",
+      "label": "Ansible Sever Settings"
+    },
     {
       "name": "virtualmachine",
-      "label": "Virtual Machine Input Variables"
+      "label": "Virtual Machine Input Settings"
+    },
+    {
+      "name": "mysql",
+      "label": "MySQL Server Settings"
     }
 
   ],
@@ -21,6 +28,121 @@
     }
   ],
   "template_input_params": [
+    {
+      "name": "ansible_hostname",
+      "description": "Ansible Host",
+      "type": "string",
+      "required": true,
+      "secured": false,
+      "label": "Ansible Server Hostname",
+      "hidden": false,
+      "immutable": false,
+      "group_name": "ansibleserver"
+    },
+    {
+      "name": "ansible_username",
+      "description": "Ansible Username",
+      "type": "string",
+      "required": true,
+      "secured": false,
+      "label": "Ansible Server Username",
+      "hidden": false,
+      "immutable": false,
+      "group_name": "ansibleserver"
+    },
+    {
+      "name": "ansible_password",
+      "description": "Ansible Password",
+      "type": "password",
+      "required": true,
+      "secured": false,
+      "label": "Ansible Server Password",
+      "hidden": false,
+      "immutable": false,
+      "group_name": "ansibleserver"
+    },
+    {
+      "name": "ansible_private_key",
+      "description": "Ansible Node Private SSH key Details (base64)",
+      "default": "",
+      "type": "string",
+      "required": true,
+      "secured": false,
+      "label": "Ansible Server Private key (base64)",
+      "hidden": false,
+      "immutable": false,
+      "group_name": "ansibleserver"
+    },
+    {
+      "name": "ansible_public_key_openssh",
+      "description": "Ansible Node Public SSH key Details",
+      "type": "string",
+      "required": true,
+      "secured": false,
+      "label": "Ansible Server Public Key",
+      "hidden": false,
+      "immutable": false,
+      "group_name": "ansibleserver"
+    },
+
+    {
+      "name": "mysql_dbname",
+      "description": "MySQL Database name",
+      "default": "db01",
+      "type": "string",
+      "required": true,
+      "secured": false,
+      "label": "MySQL Server Database Name",
+      "hidden": false,
+      "immutable": false,
+      "group_name": "mysql"
+    },
+    {
+      "name": "mysql_dbport",
+      "description": "MySQL Port Number",
+      "default": "3309",
+      "type": "string",
+      "required": true,
+      "secured": false,
+      "label": "MySQL Database Port Number",
+      "hidden": false,
+      "immutable": false,
+      "group_name": "mysql"
+    },
+    {
+      "name": "mysql_dbuser",
+      "description": "MySQL Database UserName",
+      "default": "dbuser",
+      "type": "string",
+      "required": true,
+      "secured": false,
+      "label": "MySQL Database Username",
+      "hidden": false,
+      "immutable": false,
+      "group_name": "mysql"
+    },
+    {
+      "name": "mysql_password",
+      "description": "MySQL Password",
+      "type": "password",
+      "required": true,
+      "secured": false,
+      "label": "MySQL Database Password",
+      "hidden": false,
+      "immutable": false,
+      "group_name": "mysql"
+    },
+    {
+      "name": "playbook_location",
+      "description": "PlayBook Location",
+      "type": "string",
+      "required": true,
+      "secured": false,
+      "label": "Ansible Playbook Location on Ansible Server",
+      "hidden": false,
+      "immutable": false,
+      "group_name": "ansibleserver"
+    },
     {
       "name": "allow_unverified_ssl",
       "type": "string",

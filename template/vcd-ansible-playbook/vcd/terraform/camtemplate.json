@@ -1,6 +1,6 @@
 {
-  "name": "Ansible Node on a single virtual machine - VCloud Director VCD",
-  "description": "This template deploys Ansible Binaries on a Linux virtual machine.",
+  "name": "LAMP stack - VCloud Director VCD",
+  "description": "This template deploys a LAMP stack on Ubuntu 16.",
   "version": "2.0",
   "imageUrl": "",
   "image": "",
