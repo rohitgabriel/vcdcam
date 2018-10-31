@@ -39,8 +39,6 @@ variable "vm_domain" {
     default     = "icplab.com"
   }
 
-variable "vm_private_ssh_key" { }
-variable "vm_public_ssh_key" { }
 
 variable "vm_vcpu" {
   description = "Number of virtual CPU for the virtual machine, which is required to be a positive Integer"
@@ -51,8 +49,6 @@ variable "vm_memory" {
   description = "Memory assigned to the virtual machine in megabytes. This value is required to be an increment of 1024"
   default = "1024"
 }
-
-variable "random" { type = "string" description = "Random String Generated"}
 
 variable "dependsOn" {
   default = "true"
