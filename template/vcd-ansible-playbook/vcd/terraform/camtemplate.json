@@ -23,7 +23,7 @@
     }
   },
   "metadata": {
-    "displayName": "Ansible Node on a single virtual machine - VMware vSphere",
+    "displayName": "LAMP on Ubuntu - VCD",
     "providerDisplayName": "VCD",
     "longDescription": "This template deploys Ansible Binaries on a Linux virtual machine.",
     "bullets": [
