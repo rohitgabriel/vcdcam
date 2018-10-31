@@ -109,7 +109,7 @@ EOF
   }
 
   provisioner "local-exec" {
-    command = "echo \"${self.clone.0.customize.0.network_interface.0.ipv4_address}       ${self.name}.${var.vm_domain} ${self.name}\" >> /tmp/${var.random}/hosts"
+    command = "echo \"${self.private_ip}       ${self.name}.${var.vm_domain} ${self.name}\" >> /tmp/${var.random}/hosts"
   }
 }
 
