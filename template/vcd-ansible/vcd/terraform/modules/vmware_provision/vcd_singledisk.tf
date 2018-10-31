@@ -109,7 +109,7 @@ EOF
   }
 
   provisioner "local-exec" {
-    command = "echo \"${var.vcd_vapp_vm.vmname.ip}       ${var.vcd_vapp_vm.vmname.name}.${var.vm_domain} ${self.name}\" >> /tmp/${var.random}/hosts"
+    command = "echo \"${var.vcd_vapp_vm.vmname.ip}       ${var.vcd_vapp_vm.vmname.name}.${var.vm_domain} ${var.vcd_vapp_vm.vmname.name}\" >> /tmp/${var.random}/hosts"
   }
 }
 
