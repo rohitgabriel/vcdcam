@@ -30,7 +30,7 @@ resource "vcd_vapp_vm" "vmname" {
 
   provisioner "file" {
     destination = "VM_add_ssh_key.sh"
-    timeout = "20s"
+
 
     content = <<EOF
 # =================================================================
