@@ -10,8 +10,8 @@ variable "vm_os_user" {
   description = "Operating System user for the Operating System User to access virtual machine"
 }
 
-variable "vm_ipv4_address_list" {
-  type = "list"
+variable "vcd_ip_addr" {
+  type = "string"
 
   description = "IPv4 Address's in List format"
 }

@@ -13,7 +13,7 @@ resource "null_resource" "install_ansible" {
     user        = "${var.vm_os_user}"
     password    = "${var.vm_os_password}"
     private_key = "${var.private_key}"
-    host        = "${var.vm_ipv4_address_list[count.index]}"
+    host        = "${var.vcd_ip_addr}"
   }
 
   # Create the installation script
