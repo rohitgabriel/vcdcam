@@ -67,6 +67,7 @@ module "deployVM_singlenode" {
   vm_os_password       = "${var.vm_os_password}"
   vm_os_user           = "${var.vm_os_user}"
   random                     = "${random_string.random-dir.result}"
+  vcd_user_name = "${var.vcd_user_name}"
 }
 
 module "ansible_install" {
