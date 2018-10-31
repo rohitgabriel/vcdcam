@@ -20,7 +20,7 @@ resource "null_resource" "install_ansible" {
   provisioner "file" {
     content = <<EOF
 #!/bin/bash
-LOGFILE="/var/log/install_ansible.log"
+LOGFILE="/tmp/install_ansible.log"
 retryInstall () {
   n=0
   max=5
@@ -48,11 +48,9 @@ fi
 string="[*] Checking installation of: ansible"
 line="......................................................................."
 if [[ $PLATFORM == *"ubuntu"* ]]; then
-    wait_apt_lock
     sudo apt-get update
-    wait_apt_lock
     echo "---start installing Ansible---" | tee -a $LOGFILE 2>&1
-    retryInstall "apt-get install -y ansible" >> $LOGFILE 2>&1 || { echo "---Failed to install Ansible---" | tee -a $LOGFILE; exit 1; }
+    sudo apt-get install -y ansible >> $LOGFILE 2>&1 || { echo "---Failed to install Ansible---" | tee -a $LOGFILE; exit 1; }
     echo "---finish installing Ansible---" | tee -a $LOGFILE 2>&1
   else
     echo "---start installing Ansible---" | tee -a $LOGFILE 2>&1
