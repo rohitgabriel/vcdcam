@@ -1,5 +1,5 @@
 variable "vcd_ip_addr" {
-  type        = "list"
+  type        = "string"
   description = "IPv4 Address's in List format"
 }
 
