@@ -81,18 +81,3 @@ module "add_ansible_public_key" {
   dependsOn            = "${module.deployVM_singlenode.dependsOn}"
   public_key           = "${var.ansible_public_key_openssh}"
 }
-
-module "execute_lamp_playbook" {
-  source               = "./modules/execute_ansible"
-  ansible_username     = "${var.ansible_username}"
-  ansible_password     = "${var.ansible_password}"
-  ansible_private_key  = "${var.ansible_private_key}"
-  ansible_hostname     = "${var.ansible_hostname}"
-  playbook_location    = "${var.playbook_location}"
-  mysql_password       = "${var.mysql_password}"
-  mysql_dbuser         = "${var.mysql_dbuser}"
-  mysql_dbname         = "${var.mysql_dbname}"
-  mysql_dbport         = "${var.mysql_dbport}"
-  vcd_ip_addr          = "${var.vcd_ip_addr}"
-  dependsOn            = "${module.add_ansible_public_key.dependsOn}"
-}
