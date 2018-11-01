@@ -12,7 +12,7 @@ resource "null_resource" "execute_ansible" {
     type        = "ssh"
     user        = "${var.ansible_username}"
     password    = "${var.ansible_password}"
-  #  private_key = "${var.ansible_private_key}"
+    private_key = "${var.ansible_private_key}"
     host        = "${var.ansible_hostname}"
   }
 
