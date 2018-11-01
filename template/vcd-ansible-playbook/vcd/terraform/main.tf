@@ -93,6 +93,6 @@ module "execute_lamp_playbook" {
   mysql_dbuser         = "${var.mysql_dbuser}"
   mysql_dbname         = "${var.mysql_dbname}"
   mysql_dbport         = "${var.mysql_dbport}"
-  vcd_ip_address = "${concat(var.vcd_ip_address)}"
+  vcd_ip_addr = "${concat(var.vcd_ip_addr)}"
   dependsOn            = "${module.add_ansible_public_key.dependsOn}"
 }
