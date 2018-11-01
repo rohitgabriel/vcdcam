@@ -82,7 +82,7 @@ module "add_ansible_public_key" {
   public_key           = "${var.ansible_public_key_openssh}"
 }
 
-module "execute_nginx_playbook" {
+module "execute_docker_playbook" {
   source               = "./modules/execute_ansible"
   ansible_username     = "${var.ansible_username}"
   ansible_password     = "${var.ansible_password}"
