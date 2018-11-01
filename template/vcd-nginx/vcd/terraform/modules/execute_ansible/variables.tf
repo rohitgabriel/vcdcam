@@ -25,7 +25,3 @@ variable "ansible_private_key" {
 }
 
 variable "playbook_location" {}
-variable "mysql_password" {}
-variable "mysql_dbuser" {}
-variable "mysql_dbname" {}
-variable "mysql_dbport" {}
