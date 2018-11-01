@@ -76,7 +76,7 @@ module "add_ansible_public_key" {
   private_key          = "${tls_private_key.generate.private_key_pem}"
   vm_os_password       = "${var.vm_os_password}"
   vm_os_user           = "${var.vm_os_user}"
-  vcd_ip_addr = "${concat(var.vcd_ip_addr)}"
+  vcd_ip_addr          = "${var.vcd_ip_addr}"
   random               = "${random_string.random-dir.result}"
   dependsOn            = "${module.deployVM_singlenode.dependsOn}"
   public_key           = "${var.ansible_public_key_openssh}"
@@ -93,6 +93,6 @@ module "execute_lamp_playbook" {
   mysql_dbuser         = "${var.mysql_dbuser}"
   mysql_dbname         = "${var.mysql_dbname}"
   mysql_dbport         = "${var.mysql_dbport}"
-  vcd_ip_addr = "${concat(var.vcd_ip_addr)}"
+  vcd_ip_addr          = "${var.vcd_ip_addr}"
   dependsOn            = "${module.add_ansible_public_key.dependsOn}"
 }
