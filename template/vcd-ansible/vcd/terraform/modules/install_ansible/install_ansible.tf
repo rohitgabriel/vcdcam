@@ -48,7 +48,10 @@ fi
 string="[*] Checking installation of: ansible"
 line="......................................................................."
 if [[ $PLATFORM == *"ubuntu"* ]]; then
+    sudo apt install software-properties-common
+    yes | sudo apt-add-repository ppa:ansible/ansible
     sudo apt-get update
+    sudo apt install ansible
     echo "---start installing Ansible---" | tee -a $LOGFILE 2>&1
     sudo apt-get install -y ansible >> $LOGFILE 2>&1 || { echo "---Failed to install Ansible---" | tee -a $LOGFILE; exit 1; }
     echo "---finish installing Ansible---" | tee -a $LOGFILE 2>&1
