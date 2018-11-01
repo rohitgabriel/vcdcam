@@ -99,7 +99,7 @@ variable "vcd_network_name" {
   default = "TWG-ICP"
 }
 
-variable "vcd_ip_addr" {
+variable "vcd_ip_address" {
   description = "Static IP address"
   default = "TWG-ICP"
 }
