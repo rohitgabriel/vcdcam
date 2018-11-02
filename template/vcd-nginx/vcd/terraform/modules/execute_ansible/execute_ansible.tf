@@ -41,7 +41,7 @@ EOF
   # Execute the script remotely
   provisioner "remote-exec" {
     inline = [
-      "sleep 30 && cd ${var.playbook_location} && ansible-playbook -i \"/tmp/ansible-playbook-host-nginx\" main.yml -e \"ansible_python_interpreter=/usr/bin/python3\"",
+      "sleep 90 && cd ${var.playbook_location} && ansible-playbook -i \"/tmp/ansible-playbook-host-nginx\" main.yml -e \"ansible_python_interpreter=/usr/bin/python3\"",
     ]
   }
 }
