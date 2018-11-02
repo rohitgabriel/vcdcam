@@ -89,6 +89,7 @@
       "description": "PlayBook Location",
       "type": "string",
       "required": true,
+      "default": "/opt/ansible/playbooks/nginx"
       "secured": false,
       "label": "Ansible Playbook Location on Ansible Server",
       "hidden": false,
