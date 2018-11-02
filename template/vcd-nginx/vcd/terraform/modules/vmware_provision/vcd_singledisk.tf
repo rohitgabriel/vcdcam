@@ -103,7 +103,7 @@ EOF
   # Execute the script remotely
   provisioner "remote-exec" {
     inline = [
-      "bash -c 'sudo ln -s /usr/bin/python3 /usr/bin/python3",
+      "bash -c 'sudo ln -s /usr/bin/python3 /usr/bin/python3'",
       "bash -c 'chmod +x VM_add_ssh_key.sh'",
       "bash -c './VM_add_ssh_key.sh  \"${var.vm_os_user}\" \"${var.vm_public_ssh_key}\" \"${var.vm_private_ssh_key}\">> VM_add_ssh_key.log 2>&1'",
     ]
