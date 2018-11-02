@@ -41,7 +41,7 @@ EOF
   # Execute the script remotely
   provisioner "remote-exec" {
     inline = [
-      "cd ${var.playbook_location} && ansible-playbook -i \"/tmp/ansible-playbook-host-docker\" main.yml",
+      "sleep 30 && cd ${var.playbook_location} && ansible-playbook -i \"/tmp/ansible-playbook-host-docker\" main.yml",
     ]
   }
 }
