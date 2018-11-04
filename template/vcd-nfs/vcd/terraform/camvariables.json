@@ -1,0 +1,298 @@
+{
+  "input_datatypes": [
+  ],
+  "output_datatype": "content_template_output",
+  "input_groups": [
+    {
+      "name": "cloud",
+      "label": "Cloud Input Variables"
+    },
+    {
+      "name": "ansibleserver",
+      "label": "Ansible Sever Settings"
+    },
+    {
+      "name": "virtualmachine",
+      "label": "Virtual Machine Input Settings"
+    },
+    {
+      "name": "mysql",
+      "label": "MySQL Server Settings"
+    }
+
+  ],
+  "output_groups": [
+    {
+      "name": "content_template_output",
+      "label": "Outputs"
+    }
+  ],
+  "template_input_params": [
+    {
+      "name": "ansible_hostname",
+      "description": "Ansible Host",
+      "type": "string",
+      "required": true,
+      "secured": false,
+      "label": "Ansible Server Hostname",
+      "hidden": false,
+      "immutable": false,
+      "group_name": "ansibleserver"
+    },
+    {
+      "name": "ansible_username",
+      "description": "Ansible Username",
+      "type": "string",
+      "required": true,
+      "secured": false,
+      "label": "Ansible Server Username",
+      "hidden": false,
+      "immutable": false,
+      "group_name": "ansibleserver"
+    },
+    {
+      "name": "ansible_password",
+      "description": "Ansible Password",
+      "type": "password",
+      "required": true,
+      "secured": false,
+      "label": "Ansible Server Password",
+      "hidden": false,
+      "immutable": false,
+      "group_name": "ansibleserver"
+    },
+    {
+      "name": "ansible_private_key",
+      "description": "Ansible Node Private SSH key Details (base64)",
+      "default": "",
+      "type": "string",
+      "required": true,
+      "secured": false,
+      "label": "Ansible Server Private key (base64)",
+      "hidden": false,
+      "immutable": false,
+      "group_name": "ansibleserver"
+    },
+    {
+      "name": "ansible_public_key_openssh",
+      "description": "Ansible Node Public SSH key Details",
+      "type": "string",
+      "required": true,
+      "secured": false,
+      "label": "Ansible Server Public Key",
+      "hidden": false,
+      "immutable": false,
+      "group_name": "ansibleserver"
+    },
+    {
+      "name": "playbook_location",
+      "description": "PlayBook Location",
+      "type": "string",
+      "required": true,
+      "default": "/opt/ansible/playbooks/nfs",
+      "secured": false,
+      "label": "Ansible Playbook Location on Ansible Server",
+      "hidden": false,
+      "immutable": false,
+      "group_name": "ansibleserver"
+    },
+    {
+      "name": "allow_unverified_ssl",
+      "type": "string",
+      "description": "Communication with vsphere server with self signed certificate",
+      "default": true,
+      "hidden": true,
+      "label": "Communication with vsphere server with self signed certificate",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "power_off",
+      "type": "string",
+      "description": "power off vapp or vm",
+      "default": false,
+      "hidden": true,
+      "label": "power",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "vcd_user_name",
+      "type": "string",
+      "description": "User name",
+      "default": "",
+      "hidden": false,
+      "label": "username",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "vcd_user_password",
+      "type": "string",
+      "description": "User password",
+      "default": "",
+      "hidden": false,
+      "label": "password",
+      "secured": true,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "vcd_org_name",
+      "type": "string",
+      "description": "Org name",
+      "default": "tstcs1",
+      "hidden": false,
+      "label": "tenancy",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "vcd_host_url",
+      "type": "string",
+      "description": "VCD url",
+      "default": "https://portal.nzcc.ihost.com/api",
+      "hidden": false,
+      "label": "hosturl",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "vcd_vdc_name",
+      "type": "string",
+      "description": "VDC name",
+      "default": "TSTCS1-PAYG",
+      "hidden": false,
+      "label": "vdcname",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "cloud"
+    },
+    {
+      "name": "vcd_vapp_name",
+      "type": "string",
+      "description": "Vapp name",
+      "default": "",
+      "hidden": false,
+      "label": "Vapp name",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    },
+    {
+      "name": "vcd_catalog_name",
+      "type": "string",
+      "description": "VCD catalog name",
+      "default": "Appliances and media",
+      "hidden": false,
+      "label": "VCD catalog name",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    },
+    {
+      "name": "vcd_vm_template_name",
+      "type": "string",
+      "description": "VM template name",
+      "default": "Ubuntu-1604-linux",
+      "hidden": false,
+      "label": "VM template name",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    },
+    {
+      "name": "vcd_network_name",
+      "type": "string",
+      "description": "VCD network name",
+      "default": "TWG-ICP",
+      "hidden": false,
+      "label": "VCD network name",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    },
+    {
+      "name": "vm_domain",
+      "description": "Ansible Node Virtual Machine's domain name",
+      "type": "string",
+      "required": true,
+      "secured": false,
+      "label": "Domain Name",
+      "hidden": false,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    },
+    {
+      "name": "vm_os_user",
+      "description": "The user name to use while configuring the Ansible Node.",
+      "type": "string",
+      "required": true,
+      "secured": false,
+      "label": "nfs Node user name",
+      "hidden": false,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    },
+    {
+      "name": "vm_os_password",
+      "description": "The user password to use while configuring the Ansible Node",
+      "type": "password",
+      "required": true,
+      "secured": false,
+      "label": "nfs Node user password",
+      "hidden": false,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    },
+    {
+      "name": "vcd_ip_addr",
+      "type": "string",
+      "description": "IP address",
+      "default": "10.0.0.43",
+      "hidden": false,
+      "label": "Static IP",
+      "secured": false,
+      "required": false,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    },
+    {
+      "name": "vm_name",
+      "type": "string",
+      "description": "VM Name",
+      "default": "nfs",
+      "hidden": false,
+      "label": "VM Name",
+      "secured": false,
+      "required": false,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    }
+  ],
+  "template_output_params": [
+    {
+      "name": "Ansible Public SSH Key for other machines",
+      "label": "Ansible Public SSH Key for other machines",
+      "description": "",
+      "secured": false,
+      "hidden": false
+    }
+  ]
+}
