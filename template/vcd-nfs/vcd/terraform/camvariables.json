@@ -265,7 +265,7 @@
       "name": "vcd_ip_addr",
       "type": "string",
       "description": "IP address",
-      "default": "10.0.0.43",
+      "default": "10.0.0.48",
       "hidden": false,
       "label": "Static IP",
       "secured": false,
