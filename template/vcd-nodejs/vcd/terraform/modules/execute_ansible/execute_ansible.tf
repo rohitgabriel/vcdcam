@@ -26,7 +26,7 @@ ${var.vcd_ip_addr}
 ${var.vcd_ip_addr}
 EOF
 
-    destination = "/tmp/ansible-playbook-host-elasticsearch"
+    destination = "/tmp/ansible-playbook-host-nodejs"
   }
 
   # Produce a YAML file to override defaults.
@@ -41,7 +41,7 @@ EOF
   # Execute the script remotely
   provisioner "remote-exec" {
     inline = [
-      "sleep 180 && cd ${var.playbook_location} && ansible-playbook -i \"/tmp/ansible-playbook-host-elasticsearch\" main.yml -e \"ansible_python_interpreter=/usr/bin/python3\"",
+      "sleep 120 && cd ${var.playbook_location} && ansible-playbook -i \"/tmp/ansible-playbook-host-nodejs\" main.yml -e \"ansible_python_interpreter=/usr/bin/python3\"",
     ]
   }
 }
