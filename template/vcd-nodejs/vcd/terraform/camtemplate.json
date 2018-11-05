@@ -1,6 +1,6 @@
 {
-  "name": "Docker on Ubuntu- VCloud Director VCD",
-  "description": "This template deploys docker on Ubuntu 16.",
+  "name": "nodejs on Ubuntu- VCloud Director VCD",
+  "description": "This template deploys nodejs on Ubuntu 16.",
   "version": "2.0",
   "imageUrl": "",
   "image": "",
@@ -23,9 +23,9 @@
     }
   },
   "metadata": {
-    "displayName": "Docker on Ubuntu - VCD",
+    "displayName": "nodejs on Ubuntu - VCD",
     "providerDisplayName": "VCD",
-    "longDescription": "This template deploys Docker on a Linux virtual machine.",
+    "longDescription": "This template deploys nodejs on a Linux virtual machine.",
     "bullets": [
       {
         "title": "Clouds",
